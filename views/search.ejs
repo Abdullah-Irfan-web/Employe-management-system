@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Employee||Data</title>
+        <link rel="stylesheet" href="/stylesheets/search.css">
+    </head>
+    <body>
+        <div>
+            <h1>Search Employee</h1>
+            <form action="/employee" method="GET">
+             
+              <input type="text" id="fname" name="empname" placeholder="Employee Name">
+          
+              
+             
+             
+              
+            
+              <input type="submit" value="Submit">
+            </form>
+
+            <% if(employee){ %>
+              <h1>
+                Search Results.
+            </h1>
+            <table id="customers">
+                <tr>
+                  <th>Name</th>
+                  <th>Designation</th>
+                  <th>Salary</th>
+                 
+                </tr>
+                <tr>
+                  <td><%= employee.name%></td>
+                  <td><%= employee.designation%></td>
+                  <td><%= employee.salary%></td>
+                  </tr>
+
+           <% }%>
+          
+          </div>
+
+          
+    </body>
+</html>

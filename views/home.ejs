@@ -1,0 +1,54 @@
+<html>
+    <head>
+<title>Employee||data</title>
+
+        <link rel="stylesheet" href="/stylesheets/home.css">
+    </head>
+
+    <body>
+        
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="/">Employee</a><span>Data</span></div>
+                <ul>
+                    <li><a href="/employee/new">Add New Data</a></li>
+                    <li><a href="/employee/search">Search</a></li>
+                  
+                </ul>
+    
+            </div>
+        </nav>
+        <%  if(success_msg && success_msg!=''){ %>
+            <div class="smsg">
+                <p><%=success_msg%></p></div>
+      <%  }  else if(error_msg && error_msg!='') { %>
+      
+        <div class="smsg"><%=error_msg%></div>
+        <% } %>
+       
+
+        <table id="customers">
+            <tr>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Salary</th>
+              <th>Operation</th>
+            </tr>
+            <% employee.forEach((emp)=>{%>
+                <tr>
+                    <td><%=emp.name%></td>
+                    <td><%=emp.designation%></td>
+                    <td><%=emp.salary%></td>
+                    <td><a href="/edit/<%= emp.id%>" id="ed">Edit</a>
+                        <a href="/delete/<%= emp.id%>" id="del">Delete</a>
+                  </td>
+                  </tr>
+          <%  })%>
+           
+           
+              
+             
+           
+          </table>
+    </body>
+</html>

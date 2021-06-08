@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Employee||Data</title>
+        <link rel="stylesheet" href="/stylesheets/update.css">
+    </head>
+    <body>
+        <div>
+            <h1>Update Employee</h1>
+            <form action="/edit/<%=employee.id%>" method="POST">
+             
+              <input type="text" id="fname" value="<%=employee.name%>" name="empname" placeholder="Employee Name">
+          
+              
+              <input type="text" id="lname" value="<%=employee.designation%>" name="designation" placeholder="Employee Designation">
+          
+              <input type="text" id="lname" value="<%=employee.salary%>" name="salary" placeholder="Salary">
+             
+              
+            
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          
+    </body>
+</html>
