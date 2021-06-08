@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyparser=require('body-parser');
 const flash=require('connect-flash');
 const session=require('express-session');
+const PORT=process.env.PORT ||8000;
 
 
 const DBa='mongodb+srv://abdullah:abd123@cluster0.34stq.mongodb.net/empdata?retryWrites=true&w=majority'
@@ -138,7 +139,7 @@ app.post('/edit/:id',(req,res)=>{
 
 })
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Started");
 })
 
